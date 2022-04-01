@@ -2,7 +2,6 @@ ipxe-qemu
 libaio1
 libatomic1
 libc6
-libcapstone4
 libfdt1
 libfuse3-3
 libgcc-s1
