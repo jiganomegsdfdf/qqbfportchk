@@ -1,8 +1,6 @@
-qemu-system-x86
 ipxe-qemu
 libaio1
 libatomic1
-libbpf0
 libc6
 libcapstone4
 libfdt1
