@@ -23,7 +23,6 @@ libxendevicemodel1
 libxenevtchn1
 libxenforeignmemory1
 libxengnttab1
-libxenstore4
 libxentoolcore1
 libzstd1
 qemu-system-common
