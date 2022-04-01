@@ -18,7 +18,6 @@ libseccomp2
 libslirp0
 libstdc++6
 libudev1
-liburing2
 libvdeplug2
 libxendevicemodel1
 libxenevtchn1
