@@ -7,7 +7,7 @@ $alltext = "";
 
 function printl($text){
 	global $alltext;
-	$alltext = $alltext . $text . "<br>";
+	$alltext = $alltext . " <p> " . $text . "</p><br>";
 }
 
 $token = str_replace('"', '', $_GET['auth']);
