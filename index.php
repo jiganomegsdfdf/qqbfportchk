@@ -1,5 +1,8 @@
 <?php
 
+print("<head>");
+print("		<link rel='stylesheet' href='styles.css'>");
+print("</head>");
 $alltext = "";
 
 function printl($text){
