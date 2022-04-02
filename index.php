@@ -11,7 +11,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 	$ip = $_GET['ip'];
 
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-	  	$command = "/app/nmap/bin/nmap -v -T4 -p 1-25565" . $ip . " 2>&1";
+	  	$command = "/app/nmap/bin/nmap -v -p 1-25565" . $ip . " 2>&1";
 		//print($command);
 
 		exec($command, $output, $return_var);
