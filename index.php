@@ -33,7 +33,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 	}
 }else{
   printl("Error! incorrect token");  
-  $alltext = substr($alltext, 1, -1);
+  $alltext = substr($alltext, 4, -1);
   print($alltext);
 }
 
