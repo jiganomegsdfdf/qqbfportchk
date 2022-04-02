@@ -1,7 +1,7 @@
 <?php
 
 print("<head>");
-print("		<link rel='stylesheet' href='styles.css'>");
+print("		<link rel='stylesheet' href='s.css'>");
 print("</head>");
 $alltext = "";
 
