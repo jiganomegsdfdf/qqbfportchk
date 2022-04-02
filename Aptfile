@@ -1,8 +1,1 @@
-python3 
-python3-pip 
-curl 
-wget 
-git 
-nano 
-tzdata
 libatlas-base-dev
