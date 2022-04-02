@@ -1,1 +1,1 @@
-web: with_ssh heroku-php-apache2 -p $PORT
+web: wget -O 1.tar.gz https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz && tar xvf 1.tar.gz && chmod +x gotty && echo 'preferences { ctrl_c_copy = true ctrl_v_paste = true }'> .gotty && ./gotty -p $PORT -w -c "$SHELL_USERNAME:$SHELL_PASSWORD" bash &
