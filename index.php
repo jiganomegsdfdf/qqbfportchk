@@ -1,5 +1,7 @@
 <?php
 
+$alltext = "";
+
 function printl($text){
 	global $alltext;
 	$alltext = $alltext . $text . "<br>";
