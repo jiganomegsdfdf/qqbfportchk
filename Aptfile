@@ -3,6 +3,5 @@ python3-pip
 curl 
 wget 
 git 
-libssl1.0-dev 
 nano 
 tzdata
