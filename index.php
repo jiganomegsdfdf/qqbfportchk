@@ -3,12 +3,6 @@
 print("<head>");
 print("		<link rel='stylesheet' href='s.css'>");
 print("</head>");
-$alltext = "";
-
-function printl($text){
-	global $alltext;
-	$alltext = $alltext . " <p> " . $text . "</p><br>";
-}
 
 $token = str_replace('"', '', $_GET['auth']);
 $tokenold = $token;
@@ -22,19 +16,47 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 
 		exec($command, $output, $return_var);
 		//var_dump($output);
-		foreach ($output as $value) {
-		    printl($value);
+		$textarr = $output;
+		array_shift($textarr);
+		$portarr = array("");
+		array_shift($portarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		$pingms = explode("s elapsed",explode(", ", array_shift($textarr))[1])[0]*1000;
+
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+
+		$preportsarr = $textarr;
+		$portcount = 0;
+		while (true){
+			$str = array_shift($preportsarr);
+			if (str_contains($str, "Discovered")){
+				$portcount += 1;
+				array_push($portarr, $str);
+				array_shift($textarr);
+			}else{
+				break;
+			}
 		}
-		$alltext = substr($alltext, 1, -1);
-  		print($alltext);
-	}
-	else {
+
+		print("<p>ping " . $pingms . "ms</p><br>");
+		print("<p>port's count: " . $portcount . "</p><br>");
+		//var_dump($portarr);
+		foreach ($portarr as $value) {
+		    print("<p>" . $value . "</p><br>");
+		}
+		print("<p>" . end($textarr) . "</p><br>");
+	}else{
 	  	echo "Not valid ip address.";
 	}
 }else{
   printl("Error! incorrect token");  
-  $alltext = substr($alltext, 4, -1);
-  print($alltext);
 }
 
 ?>
