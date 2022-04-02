@@ -1,6 +1,0 @@
-authtoken: 2515K0CLYypr3C2Rryb0HdyU9zL_jiFihb9J6mR6B4Pgu8GR
-region: jp
-tunnels:
-  ssh:
-    proto: tcp
-    addr: 22
