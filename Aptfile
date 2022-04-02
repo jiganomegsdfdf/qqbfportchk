@@ -3,7 +3,6 @@ python3-pip
 curl 
 wget 
 git 
-wkhtmltopdf 
 libssl1.0-dev 
 nano 
 tzdata
