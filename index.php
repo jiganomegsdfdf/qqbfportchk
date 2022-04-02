@@ -25,8 +25,9 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		array_shift($textarr);
 		array_shift($textarr);
 		array_shift($textarr);
-		$pings = explode("s elapsed",explode(", ", array_shift($textarr))[1])[0];
-		$pingms = explode("s elapsed",explode(", ", array_shift($textarr))[1])[0]*1000;
+		$str = array_shift($textarr);
+		$pings = explode("s elapsed",explode(", ", $str)[1])[0];
+		$pingms = explode("s elapsed",explode(", ", $str)[1])[0]*1000;
 
 		array_shift($textarr);
 		array_shift($textarr);
