@@ -5,4 +5,4 @@ wget
 git 
 nano 
 tzdata
-nmap
+libatlas-base-dev
