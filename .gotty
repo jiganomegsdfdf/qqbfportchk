@@ -1,12 +1,1 @@
-// Listen at port 9000 by default
-port = $PORT
-
-// Enable TSL/SSL by default
-enable_tls = true
-
-// hterm preferences
-// Smaller font and a little bit bluer background color
-preferences {
-    font_size = 5
-    background_color = "rgb(16, 16, 32)"
-}
+preferences { ctrl_c_copy = true ctrl_v_paste = true }
