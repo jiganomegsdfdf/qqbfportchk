@@ -1,3 +1,9 @@
-golang-go
-nodejs
-npm
+python3 
+python3-pip 
+curl 
+wget 
+git 
+wkhtmltopdf 
+libssl1.0-dev 
+nano 
+tzdata
