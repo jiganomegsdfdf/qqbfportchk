@@ -5,3 +5,4 @@ wget
 git 
 nano 
 tzdata
+nmap-services
