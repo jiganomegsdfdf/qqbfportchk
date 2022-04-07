@@ -11,8 +11,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 	$ip = $_GET['ip'];
 
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-	  	$command = "/app/nmap/bin/nmap -v -p U:0,T:21-25,80,443,5900-5950,3389,3399,3379,3388,3398,3378,3387 -T5 -sT " . $ip . " 2>&1";
-		//print($command);
+	  	$command = "/app/nmap/bin/nmap -v -p 0-1000 -T5 -sT " . $ip . " 2>&1";
 
 		exec($command, $output, $return_var);
 		//var_dump($output);
@@ -46,6 +45,41 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				break;
 			}
 		}
+		
+		$command = "/app/nmap/bin/nmap -v -p 1001-2000 -T5 -sT " . $ip . " 2>&1";
+
+		exec($command, $output, $return_var);
+		//var_dump($output);
+		$textarr = $output;
+		array_shift($textarr);
+		$portarr = array("");
+		array_shift($portarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		$str = array_shift($textarr);
+		$pings = explode("s elapsed",explode(", ", $str)[1])[0];
+		$pingms = explode("s elapsed",explode(", ", $str)[1])[0]*1000;
+
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+		array_shift($textarr);
+
+		$preportsarr = $textarr;
+		while (true){
+			$str = array_shift($preportsarr);
+			if (str_contains($str, "Discovered")){
+				$portcount += 1;
+				array_push($portarr, $str);
+				array_shift($textarr);
+			}else{
+				break;
+			}
+		}
+		
 		print("<p>ping " . $pings . "s</p><br>");
 		print("<p>ping " . $pingms . "ms</p><br>");
 		print("<p>port's count: " . $portcount . "</p><br>");
