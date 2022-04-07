@@ -54,7 +54,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 	$ip = $_GET['ip'];
 
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-		/*list($pings1, $pingms1, $portcount1, $portarr1) = checker(0,1000, $ip);
+		list($pings1, $pingms1, $portcount1, $portarr1) = checker(0,1000, $ip);
 		list($pings2, $pingms2, $portcount2, $portarr2) = checker(1001,2000, $ip);
 		list($pings3, $pingms3, $portcount3, $portarr3) = checker(2001,3000, $ip);
 		list($pings4, $pingms4, $portcount4, $portarr4) = checker(3001,4000, $ip);
@@ -117,9 +117,12 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		list($pings5, $pingms5, $portcount5, $portarr5) = checker(40000+4001,40000+5000, $ip);
 		list($pings6, $pingms6, $portcount6, $portarr6) = checker(40000+5001,40000+6000, $ip);
 		list($pings7, $pingms7, $portcount7, $portarr7) = checker(40000+6001,40000+7000, $ip);
-		list($pings8, $pingms8, $portcount8, $portarr8) = checker(40000+7001,40000+8000, $ip);*/
+		list($pings8, $pingms8, $portcount8, $portarr8) = checker(40000+7001,40000+8000, $ip);
 		
-		$command = "/app/nmap/bin/nmap --version-intensity 0 -v -p U:0,T:20-25,80,443,5800-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
+		$portcount = $portcount1 + $portcount2 + $portcount3 + $portcount4 + $portcount5 + $portcount6 + $portcount7 + $portcount8 + $portcount9 + $portcount10 + $portcount;
+		$portarr = array_merge($portarr, $portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); 
+		
+		/*$command = "/app/nmap/bin/nmap --version-intensity 0 -v -p U:0,T:20-25,80,443,5800-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
 
 		exec($command, $output, $return_var);
 		//var_dump($output);
@@ -156,16 +159,16 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			}else{
 				break;
 			}
-		}
+		}*/
 		
-		print("<p>average ping seconds " . $pings . "s</p><br>");
-		print("<p>average ping milliseconds " . $pingms . "ms</p><br>");
+		print("<p>average ping seconds " . $pings1 . "s</p><br>");
+		print("<p>average ping milliseconds " . $pingms1 . "ms</p><br>");
 		print("<p>port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
 		    print("<p>" . $value . "</p><br>");
 		}
-		print("<p>" . end($textarr) . "</p><br>");
+		//print("<p>" . end($textarr) . "</p><br>");
 	}else{
 	  	echo "Not valid ip address.";
 	}
