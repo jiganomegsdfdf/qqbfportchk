@@ -51,7 +51,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 	$ip = $_GET['ip'];
 
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
-		$pings1, $pingms1, $portcount1, $portarr1 = checker(0,1000);
+		list($pings1, $pingms1, $portcount1, $portarr1) = checker(0,1000);
 		
 		//$pings = $pings1 + $pings2 + $pings3 + $pings4 + $pings5 + $pings6 + $pings7 + $pings8 + $pings9 + $pings10;
 		//$pings = $pings / 10;
