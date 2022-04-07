@@ -61,21 +61,47 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		list($pings9, $pingms9, $portcount9, $portarr9) = checker(8001,9000, $ip);
 		list($pings10, $pingms10, $portcount10, $portarr10) = checker(9001,10000, $ip);
 		
-		$pings = $pings1 + $pings2 + $pings3 + $pings4 + $pings5 + $pings6 + $pings7 + $pings8 + $pings9 + $pings10;
-		$pings = $pings / 10;
+		$portcount = $portcount1 + $portcount2 + $portcount3 + $portcount4 + $portcount5 + $portcount6 + $portcount7 + $portcount8 + $portcount9 + $portcount10;  
+		$portarr = array_merge($portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); 
+		$pings = $pings1 + $pings2 + $pings3 + $pings4 + $pings5 + $pings6 + $pings7 + $pings8 + $pings9 + $pings10 / 10;
+		$pingms = $pingms1 + $pingms2 + $pingms3 + $pingms4 + $pingms5 + $pingms6 + $pingms7 + $pingms8 + $pingms9 + $pingms10 / 10;
 		
-		$pingms = $pingms1 + $pingms2 + $pingms3 + $pingms4 + $pingms5 + $pingms6 + $pingms7 + $pingms8 + $pingms9 + $pingms10;
-		$pingms = $pingms / 10;
+		list($pings1, $pingms1, $portcount1, $portarr1) = checker(10000+1,10000+1000, $ip);
+		list($pings2, $pingms2, $portcount2, $portarr2) = checker(10000+1001,10000+2000, $ip);
+		list($pings3, $pingms3, $portcount3, $portarr3) = checker(10000+2001,10000+3000, $ip);
+		list($pings4, $pingms4, $portcount4, $portarr4) = checker(10000+3001,10000+4000, $ip);
+		list($pings5, $pingms5, $portcount5, $portarr5) = checker(10000+4001,10000+5000, $ip);
+		list($pings6, $pingms6, $portcount6, $portarr6) = checker(10000+5001,10000+6000, $ip);
+		list($pings7, $pingms7, $portcount7, $portarr7) = checker(10000+6001,10000+7000, $ip);
+		list($pings8, $pingms8, $portcount8, $portarr8) = checker(10000+7001,10000+8000, $ip);
+		list($pings9, $pingms9, $portcount9, $portarr9) = checker(10000+8001,10000+9000, $ip);
+		list($pings10, $pingms10, $portcount10, $portarr10) = checker(10000+9001,10000+10000, $ip);
 		
-		$portcount = $portcount1 + $portcount2 + $portcount3 + $portcount4 + $portcount5 + $portcount6 + $portcount7 + $portcount8 + $portcount9 + $portcount10;
+		$portcount = $portcount1 + $portcount2 + $portcount3 + $portcount4 + $portcount5 + $portcount6 + $portcount7 + $portcount8 + $portcount9 + $portcount10 + $portcount;
+		$portarr = array_merge($portarr, $portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); 
+		$pings = ($pings1 + $pings2 + $pings3 + $pings4 + $pings5 + $pings6 + $pings7 + $pings8 + $pings9 + $pings10 / 10) + $pings;
+		$pingms = ($pingms1 + $pingms2 + $pingms3 + $pingms4 + $pingms5 + $pingms6 + $pingms7 + $pingms8 + $pingms9 + $pingms10 / 10) + $pingms;
 		
+		list($pings1, $pingms1, $portcount1, $portarr1) = checker(20000+1,20000+1000, $ip);
+		list($pings2, $pingms2, $portcount2, $portarr2) = checker(20000+1001,20000+2000, $ip);
+		list($pings3, $pingms3, $portcount3, $portarr3) = checker(20000+2001,20000+3000, $ip);
+		list($pings4, $pingms4, $portcount4, $portarr4) = checker(20000+3001,20000+4000, $ip);
+		list($pings5, $pingms5, $portcount5, $portarr5) = checker(20000+4001,20000+5000, $ip);
+		list($pings6, $pingms6, $portcount6, $portarr6) = checker(20000+5001,20000+6000, $ip);
+		list($pings7, $pingms7, $portcount7, $portarr7) = checker(20000+6001,20000+7000, $ip);
+		list($pings8, $pingms8, $portcount8, $portarr8) = checker(20000+7001,20000+8000, $ip);
+		list($pings9, $pingms9, $portcount9, $portarr9) = checker(20000+8001,20000+9000, $ip);
+		list($pings10, $pingms10, $portcount10, $portarr10) = checker(20000+9001,20000+10000, $ip);
 		
-		
+		$portcount = $portcount1 + $portcount2 + $portcount3 + $portcount4 + $portcount5 + $portcount6 + $portcount7 + $portcount8 + $portcount9 + $portcount10 + $portcount;
+		$portarr = array_merge($portarr, $portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); 
+		$pings = ($pings1 + $pings2 + $pings3 + $pings4 + $pings5 + $pings6 + $pings7 + $pings8 + $pings9 + $pings10 / 10) + $pings;
+		$pingms = ($pingms1 + $pingms2 + $pingms3 + $pingms4 + $pingms5 + $pingms6 + $pingms7 + $pingms8 + $pingms9 + $pingms10 / 10) + $pingms;
+						
 		print("<p>average ping seconds " . $pings . "s</p><br>");
 		print("<p>average ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
-		$portarr = array_merge($portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); 
 		foreach ($portarr as $value) {
 		    print("<p>" . $value . "</p><br>");
 		}
