@@ -138,7 +138,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		foreach ($portarr as $value) {
 		    print("<p>" . $value . "</p><br>");
 		}
-		print("<p>" . end($textarr) . "</p><br>");
 	}else{
 	  	echo "Not valid ip address.";
 	}
