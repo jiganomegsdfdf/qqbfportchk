@@ -30,13 +30,15 @@ function checker($from, $to, $ip) {
 		$portcount = 0;
 		$preportsarr = $textarr;
 		while (true){
-			$str = array_shift($preportsarr);
-			if (str_contains($str, "Discovered")){
-				$portcount += 1;
-				array_push($portarr, $str);
-				array_shift($textarr);
-			}else{
-				break;
+			if (count($preportsarr) > 1){
+				$str = array_shift($preportsarr);
+				if (str_contains($str, "Discovered")){
+					$portcount += 1;
+					array_push($portarr, $str);
+					array_shift($textarr);
+				}else{
+					break;
+				}
 			}
 		}
 		$all = array($pings, $pingms, $portcount, $portarr);
