@@ -27,7 +27,7 @@ function checker($from, $to, $ip) {
 		array_shift($textarr);
 		array_shift($textarr);
 		array_shift($textarr);
-		
+		$portcount = 0;
 		$preportsarr = $textarr;
 		while (true){
 			$str = array_shift($preportsarr);
