@@ -8,7 +8,7 @@ function checker($from, $to, $ip) {
 		$command = "/app/nmap/bin/nmap -v –host-timeout 30s -p " . $from . "-" . $to . " -T5 -sT " . $ip . " 2>&1";
 
 		exec($command, $output, $return_var);
-		//var_dump($output);
+		var_dump($output);
 		$textarr = $output;
 		$portarr = array("");
 		array_shift($portarr);
