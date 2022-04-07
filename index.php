@@ -10,7 +10,6 @@ function checker($from, $to, $ip) {
 		exec($command, $output, $return_var);
 		//var_dump($output);
 		$textarr = $output;
-		array_shift($textarr);
 		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
