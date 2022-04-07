@@ -40,7 +40,8 @@ function checker($from, $to) {
 				break;
 			}
 		}
-		return $pings, $pingms, $portcount, $portarr;
+		$all = array($pings, $pingms, $portcount, $portarr);
+		return $all;
 }
 
 $token = str_replace('"', '', $_GET['auth']);
