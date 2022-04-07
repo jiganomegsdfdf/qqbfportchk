@@ -21,8 +21,8 @@ function checker($from, $to, $ip) {
 		array_shift($textarr);
 		array_shift($textarr);
 		$str = array_shift($textarr);
-		$pings = explode("s elapsed",explode(", ", $str)[1])[0];
-		$pingms = explode("s elapsed",explode(", ", $str)[1])[0]*1000;
+		$pings = explode("s elapsed",explode("", "", $str)[1])[0];
+		$pingms = explode("s elapsed",explode("", "", $str)[1])[0]*1000;
 
 		array_shift($textarr);
 		array_shift($textarr);
