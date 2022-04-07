@@ -5,7 +5,7 @@ print("		<link rel='stylesheet' href='s.css'>");
 print("</head>");
 
 function checker($from, $to, $ip) {
-		$command = "/app/nmap/bin/nmap -v -p " . $from . "-" . $to . " -sT " . $ip . " 2>&1";
+		$command = "/app/nmap/bin/nmap -v -p " . $from . "-" . $to . " -T5 -sT " . $ip . " 2>&1";
 
 		exec($command, $output, $return_var);
 		//var_dump($output);
