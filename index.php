@@ -128,6 +128,9 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		$pings = ($pings1 + $pings2 + $pings3 + $pings4 + $pings5 + $pings6 + $pings7 + $pings8 / 8) + $pings;
 		$pingms = ($pingms1 + $pingms2 + $pingms3 + $pingms4 + $pingms5 + $pingms6 + $pingms7 + $pingms8 / 8) + $pingms;
 		
+		$pings = $pings / 4.8;
+		$pingms = $pingms / 4.8;
+		
 		print("<p>average ping seconds " . $pings . "s</p><br>");
 		print("<p>average ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>port's count: " . $portcount . "</p><br>");
