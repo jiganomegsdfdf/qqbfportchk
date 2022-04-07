@@ -20,7 +20,6 @@ function checker($from, $to, $ip) {
 		array_shift($textarr);
 		array_shift($textarr);
 		$str = array_shift($textarr);
-		var_dump($str);
 		$pings = explode("s elapsed",explode(', ', $str)[1])[0];
 		$pingms = explode("s elapsed",explode(', ', $str)[1])[0]*1000;
 
@@ -41,7 +40,6 @@ function checker($from, $to, $ip) {
 			}
 		}
 		$all = array($pings, $pingms, $portcount, $portarr);
-		var_dump($all);
 		return $all;
 }
 
