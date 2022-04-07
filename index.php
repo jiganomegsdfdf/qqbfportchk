@@ -41,6 +41,7 @@ function checker($from, $to, $ip) {
 			}
 		}
 		$all = array($pings, $pingms, $portcount, $portarr);
+		var_dump($all);
 		return $all;
 }
 
