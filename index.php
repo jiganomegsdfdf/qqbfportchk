@@ -39,6 +39,8 @@ function checker($from, $to, $ip) {
 				}else{
 					break;
 				}
+			}else{
+				break;
 			}
 		}
 		$all = array($pings, $pingms, $portcount, $portarr);
