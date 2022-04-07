@@ -52,7 +52,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -86,7 +85,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -120,7 +118,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -154,7 +151,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -188,7 +184,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -222,7 +217,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -256,7 +250,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -290,7 +283,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -324,7 +316,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		array_shift($textarr);
-		$portarr = array("");
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
@@ -358,8 +349,8 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		$pingms = $pingms1 + $pingms2 + $pingms3 + $pingms4 + $pingms5 + $pingms6 + $pingms7 + $pingms8 + $pingms9 + $pingms10;
 		$pingms = $pingms / 10;
 		
-		print("<p>ping seconds" . $pings . "s</p><br>");
-		print("<p>ping milliseconds" . $pingms . "ms</p><br>");
+		print("<p>ping seconds " . $pings . "s</p><br>");
+		print("<p>ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
