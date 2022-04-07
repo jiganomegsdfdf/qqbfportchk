@@ -71,8 +71,8 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		
 		
 		
-		print("<p>ping seconds " . $pings . "s</p><br>");
-		print("<p>ping milliseconds " . $pingms . "ms</p><br>");
+		print("<p>average ping seconds " . $pings . "s</p><br>");
+		print("<p>average ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
 		$portarr = array_merge($portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); 
