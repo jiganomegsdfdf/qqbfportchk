@@ -177,7 +177,8 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				if(str_contains($server_response, "RFB")){
 					$command = "vncspanshot " . $ip . " " . $ip . "_" . $port . ".jpg 2>&1";
 					exec($command, $output, $return_var);
-					print("<img src='" . $ip . "_" . $port . ".jpg"'></img><br>");
+					$img = $ip . "_" . $port . ".jpg";
+					print("<img src='" . $img . "'><br>");
 				}
 			    }
 			} else {}
