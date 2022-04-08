@@ -261,6 +261,15 @@ function code_to_country( $code ){
     else return $countryList[$code];
 }
 
+private function getAsnFromIP($ip)
+{
+        $query = 'whois -h whois.cymru.com " -f ' . (string) $ip . '"';
+        $whoisResult = shell_exec($query);
+        $asnArray = explode('|', $whoisResult);
+        $cleanAsn = array_map('trim', $asnArray);
+        return $cleanAsn;
+}
+
 $token = str_replace('"', '', $_GET['auth']);
 $tokenold = $token;
 $token = md5($token);
@@ -309,12 +318,11 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		}
 		
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-		print("<p>Country: " . geoip_country_name_by_name($ip) . "</p><br>");
-		print("<p>Region: " . code_to_country(end(geoip_region_by_name($ip))) . "</p><br>");
+		print("<p>Country: " . code_to_country($details->city) . "</p><br>");
 		print("<p>City: " . $details->city . "</p><br>");
 		print("<p>Org: " . $details->org . "</p><br>");
-		print("<p>ISP: " . geoip_isp_by_name($ip) . "</p><br>");
-		print("<p>ASN: " . geoip_asnum_by_name($ip) . "</p><br>");
+		//print("<p>ISP: " . geoip_isp_by_name($ip) . "</p><br>");
+		print("<p>ASN: " . getAsnFromIP($ip) . "</p><br>");
 		print("<p>Average ping seconds " . $pings . "s</p><br>");
 		print("<p>Average ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>Port's count: " . $portcount . "</p><br>");
