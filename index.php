@@ -328,7 +328,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("<p>Port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
-		    	print("<p>" . $value . "</p><br>");
 		   	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
 			$socket = stream_socket_client('tcp://' . $ip . ':' . $port);
 			if ($socket) {
@@ -344,6 +343,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				}*/
 			    }
 			} else {}
+			print("<p>Discovered open port " . $port . "/tcp on " . $ip . "</p><br>");
 		}
 		print("<p>" . end($textarr) . "</p><br>");
 	}else{
