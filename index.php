@@ -175,9 +175,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				$server_response = fread($socket, 8192);
 				print("<p>Response: " . $server_response . "</p><br>");
 			    }
-			} else {
-			    echo 'Unable to connect to server';
-			}
+			} else {}
 		}
 		print("<p>" . end($textarr) . "</p><br>");
 	}else{
