@@ -317,7 +317,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		}
 		
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-		print("<p>Country: " . code_to_country($details->city) . "</p><br>");
+		print("<p>Country: " . code_to_country($details->country) . "</p><br>");
 		print("<p>City: " . $details->city . "</p><br>");
 		print("<p>Org: " . $details->org . "</p><br>");
 		//print("<p>ISP: " . geoip_isp_by_name($ip) . "</p><br>");
