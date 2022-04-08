@@ -335,11 +335,11 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			    $sent = stream_socket_sendto($socket, 'message');
 			    if ($sent > 0) {
 				$server_response = fread($socket, 4096);
-				print("<div class='portresponse'>")
-				print("<div class='portresponsehead'>")
+				print("<div class='portresponse'>");
+				print("<div class='portresponsehead'>");
 				print("<p>// " . $port . " / TCP</p><br>");
-				print("</div>")
-				print("<div class='portresponsebody'>")	
+				print("</div>");
+				print("<div class='portresponsebody'>");
 				print("<p>Response: " . $server_response . "</p><br>");
 				print("</div>");
 			    }
