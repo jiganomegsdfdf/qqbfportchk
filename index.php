@@ -323,9 +323,9 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		if ($asn != ""){
 			print("<p>ASN: " . $asn . "</p><br>");
 		} else {}
-		print("<p>Average ping seconds " . $pings . "s</p><br>");
-		print("<p>Average ping milliseconds " . $pingms . "ms</p><br>");
-		print("<p>Port's count: " . $portcount . "</p><br>");
+		//print("<p>Average ping seconds " . $pings . "s</p><br>");
+		//print("<p>Average ping milliseconds " . $pingms . "ms</p><br>");
+		//print("<p>Port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
 		   	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
