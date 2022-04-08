@@ -307,8 +307,8 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				break;
 			}
 		}
+		
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-		echo $details->city; // -> "Mountain View"
 		print("<p>Country: " . geoip_country_name_by_name($ip) . "</p><br>");
 		print("<p>Region: " . code_to_country(end(geoip_region_by_name($ip))) . "</p><br>");
 		print("<p>City: " . $details->city . "</p><br>");
