@@ -172,7 +172,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			if ($socket) {
 			    $sent = stream_socket_sendto($socket, 'message');
 			    if ($sent > 0) {
-				$server_response = fread($socket, 8192);
+				$server_response = fread($socket, 4096);
 				print("<p>Response: " . $server_response . "</p><br>");
 				if(str_contains($server_response, "RFB")){
 					$command = "vncsnapshot " . $ip . ":" . $port . " ". $ip . "_" . $port . ".jpg 2>&1";
