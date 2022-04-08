@@ -342,12 +342,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				print("<div class='portresponsebody'>")	
 				print("<p>Response: " . $server_response . "</p><br>");
 				print("</div>");
-				/*if(str_contains($server_response, "RFB")){
-					$command = "vncsnapshot " . $ip . ":" . $port-5900 . " ". $ip . "_" . $port . ".jpg 2>&1";
-					exec($command, $output, $return_var);
-					$img = $ip . "_" . $port . ".jpg";
-					print("<img src='" . $img . "'><br>");
-				}*/
 			    }
 			} else {}
 		}
@@ -356,7 +350,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 	  	echo "Not valid ip address.";
 	}
 }else{
-  printl("Error! incorrect token");  
+  echo "Error! incorrect token";  
 }
 
 ?>
