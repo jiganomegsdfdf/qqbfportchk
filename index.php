@@ -342,6 +342,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				print("<div class='portresponsebody'>");
 				print("<p>Response: " . $server_response . "</p><br>");
 				print("</div>");
+				print("</div>");
 			    }
 			} else {}
 		}
