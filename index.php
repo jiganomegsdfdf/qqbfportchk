@@ -321,7 +321,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("<p>City: " . $details->city . "</p><br>");
 		print("<p>Org: " . $details->org . "</p><br>");
 		//print("<p>ISP: " . geoip_isp_by_name($ip) . "</p><br>");
-		print("<p>ASN: " . var_dump(getAsnFromIP($ip)) . "</p><br>");
+		print("<p>ASN: " . getAsnFromIP($ip)[0] . "</p><br>");
 		print("<p>Average ping seconds " . $pings . "s</p><br>");
 		print("<p>Average ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>Port's count: " . $portcount . "</p><br>");
