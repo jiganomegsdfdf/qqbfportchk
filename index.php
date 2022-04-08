@@ -322,7 +322,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("<p>Org: " . $details->org . "</p><br>");
 		if ($asn != ""){
 			print("<p>ASN: " . $asn . "</p><br>");
-		}
+		} else {}
 		print("<p>Average ping seconds " . $pings . "s</p><br>");
 		print("<p>Average ping milliseconds " . $pingms . "ms</p><br>");
 		print("<p>Port's count: " . $portcount . "</p><br>");
