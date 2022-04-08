@@ -261,8 +261,7 @@ function code_to_country( $code ){
     else return $countryList[$code];
 }
 
-private function getAsnFromIP($ip)
-{
+function getAsnFromIP($ip){
         $query = 'whois -h whois.cymru.com " -f ' . (string) $ip . '"';
         $whoisResult = shell_exec($query);
         $asnArray = explode('|', $whoisResult);
