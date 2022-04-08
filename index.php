@@ -122,7 +122,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		$portcount = $portcount1 + $portcount2 + $portcount3 + $portcount4 + $portcount5 + $portcount6 + $portcount7 + $portcount8 + $portcount9 + $portcount10 + $portcount;
 		$portarr = array_merge($portarr, $portarr1, $portarr2, $portarr3, $portarr4, $portarr5, $portarr6, $portarr7, $portarr8, $portarr9, $portarr10); */
 		
-		$command = "/app/nmap/bin/nmap --version-intensity 0 -v -p U:0,T:20-25,80,443,8080,5800-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
+		$command = "/app/nmap/bin/nmap --version-intensity 0 -v -p U:0,T:20-25,80,443,8080,5900-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
 
 		exec($command, $output, $return_var);
 		//var_dump($output);
@@ -175,7 +175,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				$server_response = fread($socket, 4096);
 				print("<p>Response: " . $server_response . "</p><br>");
 				if(str_contains($server_response, "RFB")){
-					$command = "vncsnapshot " . $ip . ":" . $port . " ". $ip . "_" . $port . ".jpg 2>&1";
+					$command = "vncsnapshot " . $ip . ":" . $port-5900 . " ". $ip . "_" . $port . ".jpg 2>&1";
 					exec($command, $output, $return_var);
 					$img = $ip . "_" . $port . ".jpg";
 					print("<img src='" . $img . "'><br>");
