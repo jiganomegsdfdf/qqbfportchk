@@ -166,7 +166,18 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("<p>port's count: " . $portcount . "</p><br>");
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
-		    print("<p>" . $value . "</p><br>");
+		    	print("<p>" . $value . "</p><br>");
+		   	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
+			$socket = stream_socket_client('tcp://' . $ip . ':' . $port);
+			if ($socket) {
+			    $sent = stream_socket_sendto($socket, 'message');
+			    if ($sent > 0) {
+				$server_response = fread($socket, 8192);
+				print("<p>Response: " . $server_response . "</p><br>");
+			    }
+			} else {
+			    echo 'Unable to connect to server';
+			}
 		}
 		print("<p>" . end($textarr) . "</p><br>");
 	}else{
