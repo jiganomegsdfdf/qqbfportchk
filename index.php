@@ -335,7 +335,13 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			    $sent = stream_socket_sendto($socket, 'message');
 			    if ($sent > 0) {
 				$server_response = fread($socket, 4096);
-				print("<p>Response: " . $server_response . " :" . $port . "</p><br>");
+				print("<div class='portresponse'>")
+				print("<div class='portresponsehead'>")
+				print("<p>// " . $port . " / TCP</p><br>");
+				print("</div>")
+				print("<div class='portresponsebody'>")	
+				print("<p>Response: " . $server_response . "</p><br>");
+				print("</div>");
 				/*if(str_contains($server_response, "RFB")){
 					$command = "vncsnapshot " . $ip . ":" . $port-5900 . " ". $ip . "_" . $port . ".jpg 2>&1";
 					exec($command, $output, $return_var);
@@ -344,7 +350,6 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				}*/
 			    }
 			} else {}
-			print("<p>Discovered open port " . $port . "/tcp on " . $ip . "</p><br>");
 		}
 		print("<p>" . end($textarr) . "</p><br>");
 	}else{
