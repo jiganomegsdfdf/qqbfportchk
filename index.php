@@ -329,6 +329,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
 		   	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
+			print("<p>tcp://" . $ip . ":" . $port . "</p><br>");
 			$socket = stream_socket_client('tcp://' . $ip . ':' . $port);
 			if ($socket) {
 			    $sent = stream_socket_sendto($socket, 'message');
