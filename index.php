@@ -175,7 +175,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 				$server_response = fread($socket, 8192);
 				print("<p>Response: " . $server_response . "</p><br>");
 				if(str_contains($server_response, "RFB")){
-					$command = "vncspanshot " . $ip . " " . $ip . "_" . $port . ".jpg 2>&1";
+					$command = "vncsnapshot " . $ip . ":" . $port . " ". $ip . "_" . $port . ".jpg 2>&1";
 					exec($command, $output, $return_var);
 					$img = $ip . "_" . $port . ".jpg";
 					print("<img src='" . $img . "'><br>");
