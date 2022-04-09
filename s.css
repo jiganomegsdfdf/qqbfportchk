@@ -60,3 +60,18 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+td, th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+    font-family: Consolas, monaco, monospace; 
+    font-size: 16px; 
+    font-style: normal; 
+    font-weight: 700; 
+    margin: 0; 
+    padding: 0; 
+    vertical-align: top; 
+    margin-top: 0; 
+    margin-bottom: 0;
+}
