@@ -283,7 +283,9 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		//var_dump($output);
 		$textarr = $output;
 		$portarr = array("");
+		$portresparr = array("");
 		array_shift($portarr);
+		array_shift($portresparr);
 		array_shift($textarr);
 		array_shift($portarr);
 		array_shift($textarr);
