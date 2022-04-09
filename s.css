@@ -62,7 +62,7 @@ body {
 }
 
 td, th {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #e1e1e1;
@@ -75,4 +75,8 @@ td, th {
     vertical-align: top; 
     margin-top: 0; 
     margin-bottom: 0;
+}
+
+table, tbody {
+    width: calc(100% - 20px);
 }
