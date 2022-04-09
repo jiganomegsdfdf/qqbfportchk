@@ -335,7 +335,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			} else {}
 		}
 		print("<div class='left'>");
-		print("<div class='geninfo'><img src='earth.png'><p style='font-weight: 700;'>General</p> <p style='font-weight: normal;'>Information</p></div>");
+		print("<div class='geninfo'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>General Information</p></div>");
 		$asn = getAsnFromIP($ip)[0];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		print("<p>Country: " . code_to_country($details->country) . "</p><br>");
@@ -348,7 +348,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("</div>");
 		print("<div class='right'>");
 		print("<div class='portlist'>");
-		print("<img src='Ports.png'><p style='font-weight: normal;'>Open</p> <p>Ports</p></div>");
+		print("<img src='Ports.png' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>Open Ports</p></div>");
 		foreach ($portarr as $value) {
 			$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
 			print("<div class='portblock'><p>" . $port . "</p></div>");
