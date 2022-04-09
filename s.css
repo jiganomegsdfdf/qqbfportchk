@@ -78,5 +78,5 @@ td, th {
 }
 
 table, tbody {
-    width: calc(100% - 20px);
+    width: 100%;
 }
