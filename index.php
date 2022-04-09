@@ -329,7 +329,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			    $sent = stream_socket_sendto($socket, 'message');
 			    if ($sent > 0) {
 				$server_response = fread($socket, 4096);
-				$all="<div class='portresponse'><div class='portresponsehead'><p style='color: #444; text-transform: uppercase;'>// <strong>" . $port . "</strong> / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
+				$all="<div class='portresponse'><div class='portresponsehead'><p style='color: #444!important; text-transform: uppercase;'>// <strong>" . $port . "</strong> / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
 				array_push($portresparr, $all);
 			    }
 			} else {}
