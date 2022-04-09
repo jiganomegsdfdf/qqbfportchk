@@ -329,13 +329,13 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			    $sent = stream_socket_sendto($socket, 'message');
 			    if ($sent > 0) {
 				$server_response = fread($socket, 4096);
-				$all="<div class='portresponse'><div class='portresponsehead'><p>// " . $port . " / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
+				$all="<div class='portresponse'><div class='portresponsehead'><p style='color: #444; text-transform: uppercase;'>// <strong>" . $port . "</strong> / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
 				array_push($portresparr, $all);
 			    }
 			} else {}
 		}
 		print("<div class='left'>");
-		print("<div class='geninfo card card-yellow card-padding'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal; margin-bottom: 20px;'>General Information</p>");
+		print("<div class='geninfo card card-yellow card-padding'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal; margin-bottom: 20px;'><strong>General</strong> Information</p>");
 		$asn = getAsnFromIP($ip)[0];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		print("<p>Country: " . code_to_country($details->country) . "</p><br>");
@@ -348,7 +348,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("</div>");
 		print("<div class='right'>");
 		print("<div class='portlist card card-light-blue card-padding'>");
-		print("<img src='Ports.png' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>Open Ports</p>");
+		print("<img src='Ports.png' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>Open <strong>Ports</strong></p>");
 		foreach ($portarr as $value) {
 			$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
 			print("<div class='portblock'><p style='color: white; font-weight: normal; font-size: 14px; '>" . $port . "</p></div>");
