@@ -335,7 +335,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			} else {}
 		}
 		print("<div class='left'>");
-		print("<div class='geninfo card card-yellow card-padding'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>General Information</p>");
+		print("<div class='geninfo card card-yellow card-padding'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal; margin-bottom: 20px;'>General Information</p>");
 		$asn = getAsnFromIP($ip)[0];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		print("<p>Country: " . code_to_country($details->country) . "</p><br>");
