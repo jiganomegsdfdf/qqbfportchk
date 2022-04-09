@@ -348,10 +348,10 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("</div>");
 		print("<div class='right'>");
 		print("<div class='portlist card card-light-blue card-padding'>");
-		print("<img src='Ports.png' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>Open Ports</p></div>");
+		print("<img src='Ports.png' style='width: 30px; height: 30px;'><p style='font-weight: normal;'>Open Ports</p>");
 		foreach ($portarr as $value) {
 			$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
-			print("<div class='portblock card card-light-blue card-padding'><p>" . $port . "</p></div>");
+			print("<div class='portblock'><p>" . $port . "</p></div>");
 		}
 		print("</div>");
 		print("<div class='portrestlist'>");
