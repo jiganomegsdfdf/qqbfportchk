@@ -338,12 +338,14 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		print("<div class='geninfo card card-yellow card-padding'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal; margin-bottom: 20px; font-size: 20px; '><strong>General</strong> Information</p>");
 		$asn = getAsnFromIP($ip)[0];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-		print("<p>Country: " . code_to_country($details->country) . "</p><br>");
-		print("<p>City: " . $details->city . "</p><br>");
-		print("<p>Org: " . $details->org . "</p><br>");
+		print("<table><tbody>");
+		print("<tr><td>Country: " . code_to_country($details->country) . "</p><br></tr></td>");
+		print("<tr><td>City: " . $details->city . "</p><br></tr></td");
+		print("<tr><td>Org: " . $details->org . "</p><br></tr></td");
 		if ($asn != ""){
-			print("<p>ASN: " . $asn . "</p><br>");
+			print("<tr><td>ASN: " . $asn . "</p><br></tr></td>");
 		} else {}
+		print("</tbody></table>");
 		print("</div>");
 		print("</div>");
 		print("<div class='right'>");
