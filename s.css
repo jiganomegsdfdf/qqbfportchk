@@ -1,4 +1,23 @@
-p { font-family: Consolas, monaco, monospace; font-size: 16px; font-style: normal; font-weight: 700; margin: 0; padding: 0; vertical-align: top; margin-top: 0; margin-bottom: 0;}
-.portblock { display: inline-block; }
-.left { display: inline-block; }
-.right { display: inline-block; }
+p { 
+  font-family: Consolas, monaco, monospace; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-weight: 700; 
+  margin: 0; 
+  padding: 0; 
+  vertical-align: top; 
+  margin-top: 0; 
+  margin-bottom: 0;
+}
+.portblock { 
+  width: 40px;
+  height: 40px;
+  background-color: #2488bf!important;
+  display: inline-block; 
+}
+.left { 
+  display: inline-block; 
+}
+.right { 
+  display: inline-block; 
+}
