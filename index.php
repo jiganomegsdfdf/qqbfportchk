@@ -272,10 +272,10 @@ function getAsnFromIP($ip){
 $token = str_replace('"', '', $_GET['auth']);
 $tokenold = $token;
 $token = md5($token);
-if ($token == "9e78c5c20b172e66f75779d35040796a"){
+if ($token == "d2555ef8faa2788ebb5434b6dc9955cd"){
  	echo "POSHEL TI NAXYI PIDOR.";
 }
-if ($token == "d2555ef8faa2788ebb5434b6dc9955cd"){
+if ($token == "9e78c5c20b172e66f75779d35040796a"){
 	$ip = $_GET['ip'];
 
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
