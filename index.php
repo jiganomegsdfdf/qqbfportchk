@@ -335,7 +335,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			} else {}
 		}
 		print("<div class='left'>");
-		print("<div class='lefttext'><img src='Ports.png'><p style='font-weight: 700;'>General</p> <p style='font-weight: normal;'>Information</p></div></div>");
+		print("<div class='geninfo'><img src='Ports.png'><p style='font-weight: 700;'>General</p> <p style='font-weight: normal;'>Information</p></div>");
 		$asn = getAsnFromIP($ip)[0];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		print("<p>Country: " . code_to_country($details->country) . "</p><br>");
@@ -344,6 +344,7 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 		if ($asn != ""){
 			print("<p>ASN: " . $asn . "</p><br>");
 		} else {}
+		print("</div>");
 		print("</div>");
 		print("<div class='right'>");
 		print("<div class='portlist'>");
