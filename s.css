@@ -16,8 +16,14 @@ p {
   display: inline-block; 
 }
 .left { 
+  width: 50%;
+  height: 100%;
   display: inline-block; 
+  float: left;
 }
 .right { 
+  width: 50%;
+  height: 100%;
   display: inline-block; 
+  float: right;
 }
