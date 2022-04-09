@@ -54,3 +54,9 @@ p {
 .card-light-blue {
     border-top: 2px solid #41a4db;
 }
+
+body {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQAgMAAADjM5anAAAACVBMVEUAAAAPDw8PDxA5dZcEAAAAA3RSTlMACCueE7eWAAAAO0lEQVR4AWOAA0Y4C6vYiFI4qnBU4ajCUYWjCpmwiZGjMBQGspbCmdjEqGX1iIrCUYWjCkcVjiocVQgAPC8OuQNGhAYAAAAASUVORK5CYII=) center 2px;
+    background-color: #fff;
+    color: #000;
+}
