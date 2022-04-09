@@ -33,3 +33,22 @@ p {
   display: inline-block; 
   float: right;
 }
+
+card-yellow {
+    border-top: 2px solid #f2a20e;
+}
+
+.card-padding {
+    padding: 20px;
+}
+.card {
+    background: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+}
+
+.card-light-blue {
+    border-top: 2px solid #41a4db;
+}
