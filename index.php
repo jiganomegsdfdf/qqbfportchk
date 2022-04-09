@@ -335,18 +335,24 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			    $sent = stream_socket_sendto($socket, 'message');
 			    if ($sent > 0) {
 				$server_response = fread($socket, 4096);
-				print("<div class='portresponse'>");
-				print("<div class='portresponsehead'>");
-				print("<p>// " . $port . " / TCP</p><br>");
-				print("</div>");
-				print("<div class='portresponsebody'>");
-				print("<p>Response: " . $server_response . "</p><br>");
-				print("</div>");
-				print("</div>");
+				$all="<div class='portresponse'><div class='portresponsehead'><p>// " . $port . " / TCP</p><br></div><div class='portresponsebody'><p>Response: " . $server_response . "</p><br></div></div>";
+				array_push($portresparr, $all);
 			    }
 			} else {}
 		}
-		print("<p>" . end($textarr) . "</p><br>");
+		print("<div class='right'>");
+		print("<div class='portlist'>");
+		foreach ($portarr as $value) {
+			$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
+			print("<div class='portblock'>" . $port . "</div><br>");
+		}
+		print("</div>");
+		print("<div class='portrestlist'>");
+		foreach ($portresparr as $value) {
+			print($value);
+		}
+		print("</div>");
+		print("</div>");
 	}else{
 	  	echo "Not valid ip address.";
 	}
