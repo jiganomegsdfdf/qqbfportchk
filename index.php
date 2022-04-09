@@ -342,11 +342,13 @@ if ($token == "9e78c5c20b172e66f75779d35040796a" or $token == "d2555ef8faa2788eb
 			    }
 			} else {}
 		}
+		print("<div class='left'>");
+		print("</div>");
 		print("<div class='right'>");
 		print("<div class='portlist'>");
 		foreach ($portarr as $value) {
 			$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
-			print("<div class='portblock'>" . $port . "</div><br>");
+			print("<div class='portblock'><p>" . $port . "</p></div>");
 		}
 		print("</div>");
 		print("<div class='portrestlist'>");
