@@ -24,13 +24,13 @@ p {
   line-height: 40px;
 }
 .left { 
-  width: 50%;
+  width: calc(50% - 30px);
   height: 100%;
   display: inline-block; 
   float: left;
 }
 .right { 
-  width: 50%;
+  width: calc(50% - 30px);
   height: 100%;
   display: inline-block; 
   float: right;
