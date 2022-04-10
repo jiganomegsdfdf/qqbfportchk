@@ -338,7 +338,7 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		$asn = getAsnFromIP($ip)[0];
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		$loc = explode(",", $details->loc);
-		print("<div class='map'><div style='padding: 5px; position: absolute; background: black; top: 4%;'><img src='/images/favicon.ico' style='height: 4vh;'></img><p style='font-size: 20px; color: white;'>SHO.SYS</p></div><div style='padding: 5px; position: absolute; background: black; top: 17%;'><p style='font-size: 30px; color: white;'>{$ip}</p></div><iframe style='width: 100%; height: 20%; margin-bottom: 5px;' src='https://api.maptiler.com/maps/hybrid/?key=JbVUUx31lOPoXakQzYBc#1.0/" . $loc[0] . "/" . $loc[1] . "'></iframe></dev>");
+		print("<div class='map'><div style='padding: 5px; position: absolute; background: black; top: 4%;'><img src='/images/favicon.ico' style='height: 4vh; display: inline-block;'></img><p style='display: inline-block; font-size: 20px; color: white;'>SHO.SYS</p></div><div style='padding: 5px; position: absolute; background: black; top: 17%;'><p style='font-size: 30px; color: white;'>{$ip}</p></div><iframe style='width: 100%; height: 20%; margin-bottom: 5px;' src='https://api.maptiler.com/maps/hybrid/?key=JbVUUx31lOPoXakQzYBc#1.0/" . $loc[0] . "/" . $loc[1] . "'></iframe></dev>");
 		
 		print("<div class='left'>");
 		print("<div class='geninfo card card-yellow card-padding'><img src='earth.jpg' style='width: 30px; height: 30px;'><p style='font-weight: normal; margin-bottom: 20px; font-size: 20px; '><strong>General</strong> Information</p>");
