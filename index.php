@@ -327,12 +327,9 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 			//print("<p>tcp://" . $ip . ":" . $port . "</p><br>");
 			$socket = stream_socket_client('tcp://' . $ip . ':' . $port);
 			if ($socket) {
-			    $sent = stream_socket_sendto($socket, 'message');
-			    if ($sent > 0) {
-				$server_response = fread($socket, 4096);
-				$all="<div class='portresponse'><div class='portresponsehead'><p style='color: #444!important; text-transform: uppercase;'>// <strong>" . $port . "</strong> / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
-				array_push($portresparr, $all);
-			    }
+			    $server_response = fread($socket, 4096);
+			    $all="<div class='portresponse'><div class='portresponsehead'><p style='color: #444!important; text-transform: uppercase;'>// <strong>" . $port . "</strong> / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
+			    array_push($portresparr, $all);
 			} else {}
 		}
 		$asn = getAsnFromIP($ip)[0];
