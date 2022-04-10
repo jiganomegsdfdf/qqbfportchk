@@ -82,33 +82,13 @@ table, tbody {
 }
 
 .searchbox {
-    -webkit-text-size-adjust: 100%;
-    --balloon-font-size: 12px;
-    --balloon-move: 4px;
-    --balloon-color: rgba(16,16,16,0.95);
-    -webkit-font-smoothing: antialiased;
     color: #000;
     position: relative;
     vertical-align: middle;
-    font-family: Arial;
-    display: inline-block;
-    height: 5rem;
 }
 
 .input-wrapper {
-    -webkit-text-size-adjust: 100%;
-    --balloon-font-size: 12px;
-    --balloon-move: 4px;
-    --balloon-color: rgba(16,16,16,0.95);
-    -webkit-font-smoothing: antialiased;
-    color: #000;
-    font-family: Arial;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 550px;
-    position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+    font: inherit;-webkit-appearance: button;text-align: center;border: 1px solid #bbb;cursor: pointer;background-color: #d84d3d;border-color: #e07164;border-bottom: 3px solid #b93425;color: #fff;margin: 0;overflow: visible;height: 100%;display: inline-block;padding: 0 20px;box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);display: inline-block;
 }
 
 .visually-hidden {
