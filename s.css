@@ -91,7 +91,7 @@ table, tbody {
     position: relative;
     vertical-align: middle;
     font-family: Arial;
-    display: flex;
+    display: inline-block;
     height: 5rem;
 }
 
