@@ -324,7 +324,7 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
 		   	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
-			//print("<p>tcp://" . $ip . ":" . $port . "</p><br>");
+			print("<p>tcp://" . $ip . ":" . $port . "</p><br>");
 			$socket = stream_socket_client('tcp://' . $ip . ':' . $port);
 			if ($socket) {
 			    $server_response = fread($socket, 4096);
