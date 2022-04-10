@@ -290,11 +290,11 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		array_shift($portarr);
 		array_shift($textarr);
 		array_shift($textarr);
+		array_shift($textarr);
 		$str = array_shift($textarr);
 		$pings = explode("s elapsed",explode(', ', $str)[1])[0];
 		$pingms = explode("s elapsed",explode(', ', $str)[1])[0]*1000;
 
-		array_shift($textarr);
 		array_shift($textarr);
 		array_shift($textarr);
 		array_shift($textarr);
