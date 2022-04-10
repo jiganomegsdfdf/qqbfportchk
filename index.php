@@ -2,6 +2,7 @@
 
 print("<head>");
 print("		<link rel='stylesheet' href='s.css'>");
+print("		<link rel='icon' type='image/x-icon' href='/images/favicon.ico'>");
 print("</head>");
 
 function code_to_country( $code ){
