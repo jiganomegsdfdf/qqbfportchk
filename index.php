@@ -368,9 +368,10 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		print("</div>");
 	}else{
 	  	echo "Not valid ip address.";
+		header( "refresh:5;url=index.php" );
 	}
 }else{
-  echo "Error! incorrect token";  
+  print("<form action='/index.php' method='GET'><div class='searchbox'><div class='input-wrapper'><label for='search-query' value='Enter search query' class='visually-hidden'></label><label for='auth' value='Enter api key' class='visually-hidden'></label><input type='text' name='auth' placeholder='Enter api key' id='auth'><input type='text' name='ip' placeholder='Enter IP...' id='search-query'><button type='submit' aria-label='Submit' data-balloon-disable='data-balloon-disable' class='button-red'></button></div></div></form>");
 }
 
 ?>
