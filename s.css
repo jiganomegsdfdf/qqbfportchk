@@ -133,7 +133,6 @@ table, tbody {
     --balloon-move: 4px;
     --balloon-color: rgba(16,16,16,0.95);
     -webkit-font-smoothing: antialiased;
-    font: inherit;
     line-height: normal;
     margin: 0;
     padding: 6px 10px;
