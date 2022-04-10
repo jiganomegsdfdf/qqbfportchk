@@ -298,10 +298,10 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		array_shift($textarr);
 		array_shift($textarr);
 		array_shift($textarr);
-		var_dump($textarr);
+		//var_dump($textarr);
 		$portcount = 0;
 		$preportsarr = $textarr;
-		var_dump($textarr);
+		//var_dump($textarr);
 		while (true){
 			if (count($preportsarr) > 1){
 				$str = array_shift($preportsarr);
