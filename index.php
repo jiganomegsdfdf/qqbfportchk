@@ -279,9 +279,9 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
 		
 		$command = "/app/nmap/bin/nmap -v -Pn -p U:0,T:20-25,80,443,8080,5900-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
-		var_dump($command);
+		//var_dump($command);
 		exec($command, $output, $return_var);
-		var_dump($output);
+		//var_dump($output);
 		$textarr = $output;
 		$portarr = array("");
 		$portresparr = array("");
@@ -304,6 +304,7 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		array_shift($textarr);
 		$portcount = 0;
 		$preportsarr = $textarr;
+		var_dump($textarr);
 		while (true){
 			if (count($preportsarr) > 1){
 				$str = array_shift($preportsarr);
