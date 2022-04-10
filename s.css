@@ -80,3 +80,107 @@ td, th {
 table, tbody {
     width: 100%;
 }
+
+.searchbox {
+    -webkit-text-size-adjust: 100%;
+    --balloon-font-size: 12px;
+    --balloon-move: 4px;
+    --balloon-color: rgba(16,16,16,0.95);
+    -webkit-font-smoothing: antialiased;
+    color: #000;
+    position: relative;
+    vertical-align: middle;
+    font-family: Arial;
+    display: flex;
+    height: 5rem;
+}
+
+.input-wrapper {
+    -webkit-text-size-adjust: 100%;
+    --balloon-font-size: 12px;
+    --balloon-move: 4px;
+    --balloon-color: rgba(16,16,16,0.95);
+    -webkit-font-smoothing: antialiased;
+    color: #000;
+    font-family: Arial;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 550px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+}
+
+.visually-hidden {
+    -webkit-text-size-adjust: 100%;
+    --balloon-font-size: 12px;
+    --balloon-move: 4px;
+    --balloon-color: rgba(16,16,16,0.95);
+    -webkit-font-smoothing: antialiased;
+    color: #000;
+    font-family: Arial;
+    display: block;
+    font-weight: 600;
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+}
+
+#search-query {
+    -webkit-text-size-adjust: 100%;
+    --balloon-font-size: 12px;
+    --balloon-move: 4px;
+    --balloon-color: rgba(16,16,16,0.95);
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: normal;
+    margin: 0;
+    padding: 6px 10px;
+    border: 1px solid #757575;
+    box-shadow: none;
+    box-sizing: border-box;
+    appearance: none;
+    padding-left: 16px;
+    padding-right: 48px;
+    width: 100%;
+    color: #222;
+    border-color: #cfcfcf;
+    background-color: #fff;
+    height: 100%;
+}
+
+.button-red {
+    -webkit-text-size-adjust: 100%;
+    --balloon-font-size: 12px;
+    --balloon-move: 4px;
+    --balloon-color: rgba(16,16,16,0.95);
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    -webkit-appearance: button;
+    text-align: center;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background-color: #d84d3d;
+    border-color: #e07164;
+    border-bottom: 3px solid #b93425;
+    color: #fff;
+    margin: 0;
+    overflow: visible;
+    height: 100%;
+    float: right;
+    display: inline-block;
+    padding: 0 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+}
