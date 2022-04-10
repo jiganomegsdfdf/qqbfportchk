@@ -279,9 +279,9 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
 		
 		$command = "/app/nmap/bin/nmap -v -p U:0,T:20-25,80,443,8080,5900-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
-
+		var_dump($command);
 		exec($command, $output, $return_var);
-		//var_dump($output);
+		var_dump($output);
 		$textarr = $output;
 		$portarr = array("");
 		$portresparr = array("");
@@ -324,10 +324,10 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		//var_dump($portarr);
 		foreach ($portarr as $value) {
 		   	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
-			print("<p>tcp://" . $ip . ":" . $port . "</p><br>");
+			//print("<p>tcp://" . $ip . ":" . $port . "</p><br>");
 			$socket = stream_socket_client('tcp://' . $ip . ':' . $port);
 			if ($socket) {
-			    $server_response = fread($socket, 4096);
+			    $server_response = fread($socket, 8192);
 			    $all="<div class='portresponse'><div class='portresponsehead'><p style='color: #444!important; text-transform: uppercase;'>// <strong>" . $port . "</strong> / TCP</p><br></div><div class='portresponsebody card card-padding'><p>" . $server_response . "</p><br></div></div>";
 			    array_push($portresparr, $all);
 			} else {}
@@ -352,10 +352,10 @@ if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f
 		print("<div class='right'>");
 		print("<div class='portlist card card-light-blue card-padding'>");
 		print("<img src='Ports.png' style='width: 30px; height: 30px;'><p style='font-weight: normal; font-size: 20px; '>Open <strong>Ports</strong></p>");
-		foreach ($portarr as $value) {
-			$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
-			print("<div class='portblock'><p style='color: white; font-weight: normal; font-size: 14px; '>" . $port . "</p></div>");
-		}
+		//foreach ($portarr as $value) {
+		//	$port = str_replace("/tcp on " . $ip,"",str_replace("Discovered open port ", "", $value));
+		//	print("<div class='portblock'><p style='color: white; font-weight: normal; font-size: 14px; '>" . $port . "</p></div>");
+		//}
 		print("</div>");
 		print("<div class='portrestlist'>");
 		foreach ($portresparr as $value) {
