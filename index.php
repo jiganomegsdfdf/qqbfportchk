@@ -1,8 +1,10 @@
 <?php
 
+$ip = $_GET['ip'];
 print("<head>");
 print("		<link rel='stylesheet' href='s.css'>");
 print("		<link rel='icon' type='image/x-icon' href='/images/favicon.ico'>");
+print("		<title>SHO.SYS - {$ip}</title>");
 print("</head>");
 
 function code_to_country( $code ){
@@ -274,8 +276,6 @@ $token = str_replace('"', '', $_GET['auth']);
 $tokenold = $token;
 $token = md5($token);
 if ($token == "d2555ef8faa2788ebb5434b6dc9955cd" or $token == "9e78c5c20b172e66f75779d35040796a"){
-	$ip = $_GET['ip'];
-
 	if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
 		
 		$command = "/app/nmap/bin/nmap --version-intensity 0 -v -p U:0,T:20-25,80,443,8080,5900-5950,3389,3399,3398,3378,3387,3397,3379,53,70,113,135,139,389,445,1002,1025,1720 -T5 -sT " . $ip . " 2>&1";
